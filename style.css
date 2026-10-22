@@ -159,3 +159,10 @@ footer {
 }
 
 footer a { color: var(--muted); margin-right: 16px; }
+
+footer .maker {
+  margin: 16px 0 0;
+  font-size: 13px;
+}
+
+footer .maker a { margin-right: 0; }
