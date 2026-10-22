@@ -1,0 +1,161 @@
+/* Go Me site — colors and fonts from docs/DESIGN.md (dark only, like the app). */
+
+@font-face {
+  font-family: "Alfa Slab One";
+  src: url("fonts/AlfaSlabOne-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("fonts/Manrope-Variable.ttf") format("truetype");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+  --bg: #121112;
+  --surface: #1C1A1B;
+  --line: #2C292A;
+  --text: #F3EFEA;
+  --muted: #A39C97;
+  --accent: #FF7A59;
+  --on-accent: #121112;
+  --tape: #EDE5D3;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.logo {
+  font-family: "Alfa Slab One", Georgia, serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Alfa Slab One", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(28px, 7vw, 36px);
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 40px 0 8px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin: 40px 0 12px;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 800;
+  margin: 28px 0 6px;
+}
+
+p, ul { margin: 0 0 14px; }
+
+ul { padding-left: 22px; }
+
+li { margin-bottom: 6px; }
+
+strong { font-weight: 800; }
+
+.updated {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 18px 20px 4px;
+  margin: 24px 0;
+}
+
+.card h2 { margin-top: 0; }
+
+.tape {
+  display: inline-block;
+  background: var(--tape);
+  color: var(--on-accent);
+  font-family: "Alfa Slab One", Georgia, serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  transform: rotate(-2deg);
+}
+
+.hero {
+  padding: 48px 0 8px;
+}
+
+.hero .name {
+  font-family: "Alfa Slab One", Georgia, serif;
+  font-size: clamp(56px, 18vw, 96px);
+  line-height: 1;
+  color: var(--accent);
+  margin: 0 0 20px;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+}
+
+.links li {
+  border-top: 1px solid var(--line);
+  margin: 0;
+}
+
+.links li:first-child { border-top: 0; }
+
+.links a {
+  display: block;
+  padding: 14px 0;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  margin-top: 48px;
+  padding-top: 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+footer a { color: var(--muted); margin-right: 16px; }
